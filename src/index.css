@@ -1,13 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    padding: 0px;
+    background-color: #000000;
+    color: #ffd700;
+    font-family: 'Alegreya Sans SC', Arial, cursive;
+    background-image: url('../public/images/background.png');
+    background-repeat: space;
+}
+/* Wrapper */
+#wrapper {
+    height: 100vh;
+}
+/* Header */
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+}
+/* Navigation */
+.nav {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navLinks {
+    font-size: 40px;
+    text-decoration: none;
+    color: #ffd700;
+}
+.navLinks:hover {
+    border-bottom: 3px solid #ffd700;
+}
+/* Center article div */
+.center-article {
+    /* background-color: red; */
+    width: 80%;
+    height: 490px;
+    margin: 150px auto;
+    display: flex;
+    background-color: #000000;
+    animation: articleRotate 1s linear;
+}
+#infos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#infoDiv {
+    /* background-color: green; */
+    width: 400px;
+    height: 350px;
+}
+#infoWrapp h1 {
+    font-size: 45px;
+    text-align: center;
+    color: #ffd700;
+}
+#infoWrapp h4 {
+    font-size: 27px;
+    text-align: center;
+    color: #ffd700;
+}
+#helloDiv {
+    width: 125px;
+    background-color: #ffd700;
+    color: #000000;
+    text-align: center;
+    padding: 16px;
+    /* border-radius: 25px 25px 25px 0px; */
+    font-size: 25px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 30px;
+    clip-path: polygon(0 0, 100% 0, 85% 50%, 100% 100%, 0 100%, 15% 50%);
+    padding-left: 35px;
+    padding-right: 35px;
+}
+#helloWrapDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wallpaper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#imageDiv {
+    width: 400px;
+    height: 400px;
+    /* background-color: brown; */
+    border: 30px solid #ffd700;
+    border-radius: 50%;
+    background-image: url('../public/images/my_photo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: #000000;
+    padding: 10px 0px 10px 0px;
+}
+.footer p {
+    width: 50%;
+    margin:0 auto;
+    text-align: center;
+    font-size: 40px;
+    color: #ffd700;
+}
+/* workplaces page */
+#workplacesDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #workplaces {
+    background-color: aqua;
+} */
+#workplaces h1 {
+    font-size: 60px;
+    text-align: center;
+}
+#workplaces p {
+    font-size: 35px;
+}
+#company {
+    margin-bottom: -40px;
+}
+.centerArticleWrapper {
+    width: 100%;
+    height: 100%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact h1 {
+    font-size: 60px;
+    text-align: center;
+}
+#contact p {
+    font-size: 25px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* skills page */
+#skillsDiv {
+    /* background-color: red; */
+    width: 600px;
+}
+#skillsDiv h1 {
+    text-align: center;
+    font-size: 60px;
+}
+#skillsDiv p {
+    font-size: 30px;
+}
+#skillsDiv p strong {
+    text-decoration: underline;
+}
+
+/* about page */
+#aboutDiv {
+    width: 600px;
+    /* background-color: green; */
+}
+#aboutDiv h1 {
+    font-size: 45px;
+    text-align: center
+}
+#aboutDiv p {
+    font-size: 22px;
+}
+
+/* education page */
+#educationDiv h1 {
+    font-size: 60px;
+    text-align: center
+}
+#educationDiv p {
+    font-size: 25px;
+}
+
+/* error page */
+#errorPage h1 {
+    font-size: 60px;
+}
+
+
+/* Media queries */
+
+/* phones */
+@media only screen and (max-width: 600px) {
+    
+    body {
+        background-image: none;
+    }
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .navLinks {
+        font-size: 25px;
+    }
+    .center-article {
+        flex-direction: column;
+        height: 590px;
+    }
+    #helloDiv {
+        margin-top: 0;
+    }
+    #infos, #wallpaper {
+        width: 100%;
+        height: 50%;
+    }
+    #imageDiv {
+        width: 200px;
+        height: 200px;
+        border: 20px solid #ffd700;
+    }
+    #infoDiv {
+        width: 240px;
+        height: 270px;
+    }
+    #infoWrapp h1 {
+        font-size: 35px;
+    }
+    #workplaces h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+    #workplaces p {
+        font-size: 30px;
+    }
+    #contact h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+    #contact p {
+        font-size: 18px;
+    }
+    #skillsDiv h1 {
+        font-size: 45px;
+    }
+    #skillsDiv p {
+        font-size: 25px;
+    }
+    #aboutDiv h1 {
+        font-size: 35px;
+    }
+    #aboutDiv p {
+        font-size: 18px;
+    }
+    #educationDiv h1 {
+        font-size: 40px;
+    }
+}
+
+/* tablets */
+ @media only screen and (min-width: 600px) and (max-width: 768px) {
+    .navLinks {
+        font-size: 30px;
+    }
+    #infoDiv {
+        width: 250px;
+    }
+    #infoWrapp h1 {
+        font-size: 38px;
+    }
+    #infoWrapp h4 {
+        font-size: 25px;
+    }
+    #imageDiv {
+        width: 295px;
+        height: 340px;
+        border: 25px solid #ffd700;
+    }
+}
+
+/* center article animation */
+@keyframes articleRotate {
+	0% {
+		transform: rotateY(-180deg);
+	}
+
+	100% {
+		transform: rotateY(0deg);
+	}
 }
