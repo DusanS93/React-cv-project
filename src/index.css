@@ -9,6 +9,10 @@ body {
     background-image: url('../public/images/background.png');
     background-repeat: space;
 }
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+}
 /* Wrapper */
 #wrapper {
     height: 100vh;
